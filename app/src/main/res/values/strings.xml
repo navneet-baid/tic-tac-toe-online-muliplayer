@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="sharedPreferenceFile">User Preferences</string>
+    <string name="title_activity_profile_edit">ProfileEditActivity</string>
+    <string name="shortcut_1">Home Page</string>
+    <string name="shortcut_2">Play with Random</string>
+    <string name="shortcut_3">Play with friend</string>
+    <string name="insufficient_coins_message">Insufficient coins. Watch an Ad video to get free coins.</string>
+
+    <!-- String resources for content descriptions -->
+    <string name="coin_icon">Coin Icon</string>
+    <string name="circle_splash">Circle Splash</string>
+    <string name="cross_splash">Cross Splash</string>
+    <string name="single_player_btn">Single Player Button</string>
+    <string name="multi_player_btn">Multi Player Button</string>
+    <string name="statistics_btn">Statistics Button</string>
+    <string name="profile_btn">Profile Button</string>
+    <string name="setting_btn">Settings Button</string>
+
+    <!-- Text for UI elements -->
+    <string name="select_player_mode">Select player mode:</string>
+
+
+</resources>

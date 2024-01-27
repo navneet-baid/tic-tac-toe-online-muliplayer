@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/settingsCard"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/black_overlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/black_overlay">
+
+                <ImageView
+                    android:id="@+id/settingsBackBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFEB3B"
+                    android:src="@drawable/ic_back_arrow"
+                    android:tooltipText="Back" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="10dp"
+                android:fontFamily="monospace"
+                android:text="SETTINGS"
+                android:textColor="#FFEB3B"
+                android:textIsSelectable="false"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/View"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtSettings"
+                android:layout_marginVertical="6dp"
+                android:background="@color/white" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/View">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Music"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_music"
+                            app:drawableTint="#FF9800" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/musicToggleBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:textOff="OFF"
+                            android:textOn="ON" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Sound"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_audio"
+                            app:drawableTint="#FF9800" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/audioToggleBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:textOff="OFF"
+                            android:textOn="ON" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Vibration"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_vibration"
+                            app:drawableTint="#FF9800" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/vibrationToggleBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:textOff="OFF"
+                            android:textOn="ON" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Notifications"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_notification"
+                            app:drawableTint="#FF9800" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/notificationToggleBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:textOff="OFF"
+                            android:textOn="ON" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Troubleshoot"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_troubleshoot"
+                            app:drawableTint="#FF9800" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/troubleshootBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:text="Info" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/setting_options_back"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif-black"
+                            android:padding="6dp"
+                            android:text="Version"
+                            android:textSize="18dp"
+                            app:drawableStartCompat="@drawable/ic_version"
+                            app:drawableTint="#FF9800" />
+
+                        <TextView
+                            android:id="@+id/versionCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="V:1.0" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

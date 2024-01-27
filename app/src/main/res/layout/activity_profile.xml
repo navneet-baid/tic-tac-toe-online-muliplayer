@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/player_profile"
+    android:backgroundTint="#2927A7"
+    tools:context=".activity.ProfileActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="My Profile"
+        android:textAlignment="center"
+        android:textColor="#FFB800"
+        android:textSize="30dp"
+        android:textStyle="italic|bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_margin="20dp"
+        android:background="@drawable/profile_box"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:background="@drawable/profile_box">
+
+            <ImageView
+                android:id="@+id/imgUserProfilePhoto"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/default_icon" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@+id/imgUserProfilePhoto"
+                android:background="@drawable/username_box"
+                android:gravity="center_horizontal"
+                android:padding="15dp"
+                android:text="---"
+                android:textColor="#FF0000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtAvailableCoins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgUserProfilePhoto"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="Available Coins"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/availableCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAvailableCoins"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/coin_box"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="---"
+                android:textColor="#FF5722"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/coins_icon" />
+
+            <ImageButton
+                android:id="@+id/freeCoinsVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAvailableCoins"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/availableCoins"
+                android:background="@drawable/watch_video_btn" />
+
+            <TextView
+                android:id="@+id/txtStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/availableCoins"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="Statistics"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/winningStats"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtStats"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/stats_up_down_back"
+                android:drawableStart="@drawable/thumbs_up"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="00"
+                android:textSize="20dp"
+                android:tooltipText="Total Match Wins" />
+
+            <TextView
+                android:id="@+id/loseStats"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txtStats"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/winningStats"
+                android:background="@drawable/stats_up_down_back"
+                android:drawableStart="@drawable/thumbs_down"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="00"
+                android:textSize="20dp"
+                android:tooltipText="Total Match Losses" />
+
+            <ImageView
+                android:id="@+id/statsInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtStats"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/loseStats"
+                android:src="@drawable/ic_info" />
+
+            <TextView
+                android:id="@+id/txtNoughtPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statsInfo"
+                android:layout_marginTop="15dp"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="Select Nought"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/noughtRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNoughtPreference"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="10dp" />
+
+            <TextView
+                android:id="@+id/txtCrossPreference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noughtRecycler"
+                android:layout_marginTop="15dp"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="Select Cross"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/crossRecycler"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="6dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCrossPreference"
+                android:layout_marginTop="8dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_profile"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/editProfileBtn"
+        android:background="@drawable/ic_back_arrow"
+        android:backgroundTint="@color/active_user" />
+
+    <ImageButton
+        android:id="@+id/editProfileBtn"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_profile"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_pro_btn" />
+</RelativeLayout>

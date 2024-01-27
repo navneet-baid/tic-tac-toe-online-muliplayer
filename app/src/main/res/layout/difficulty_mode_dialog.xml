@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/diificulty_background">
+
+        <TextView
+            android:id="@+id/txtHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Select difficulty level"
+            android:textColor="#FFD700"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/easy_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHelp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/btnEasy"
+            android:drawableStart="@drawable/coins_icon"
+            android:text="10"
+            android:textColor="#FFD700"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/btnEasy"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/txtHelp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/easy_btn" />
+
+        <TextView
+            android:id="@+id/medium_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/easy_coins"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/btnMedium"
+            android:drawableStart="@drawable/coins_icon"
+            android:text="30"
+            android:textColor="#FFD700"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/btnMedium"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/btnEasy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/medium_btn" />
+
+        <ImageButton
+            android:id="@+id/btnHard"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/btnMedium"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/hard_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medium_coins"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/btnMedium"
+            android:drawableStart="@drawable/coins_icon"
+            android:text="80"
+            android:textColor="#FFD700"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnHard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/coins_icon"
+            android:drawablePadding="6dp"
+            android:text="Win the match, get 2X coins"
+            android:textColor="#FFD700"
+            android:textSize="18dp" />
+    </RelativeLayout>
+</RelativeLayout>

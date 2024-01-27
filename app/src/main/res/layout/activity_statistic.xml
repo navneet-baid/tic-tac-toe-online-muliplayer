@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/player_profile"
+    android:backgroundTint="#2927A7"
+    tools:context=".activity.StatisticActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Game Statistics"
+        android:textAlignment="center"
+        android:textColor="#FFB800"
+        android:textSize="30dp"
+        android:textStyle="italic|bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_profile"
+        android:layout_width="360dp"
+        android:layout_height="310dp"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/profile_box"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_below="@+id/text"
+            android:background="@drawable/profile_box">
+
+            <TextView
+                android:id="@+id/txtSinglePlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="Single Player Mode"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <TableLayout
+                android:id="@+id/singlePlayerStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSinglePlayer"
+                android:layout_centerHorizontal="true"
+                android:collapseColumns="4">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="MODE"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="WIN"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="LOSS"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="TOTAL"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#515151"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:text="Easy"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtEasyWinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtEasyLossScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtEasyTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#515151"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:text="Medium"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtMediumWinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtMediumLossScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtMediumTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#515151"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:text="Hard"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtHardWinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtHardLossScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtHardTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/txtMultiPlayerMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/singlePlayerStats"
+                android:layout_marginTop="10dp"
+                android:background="#FFBB00"
+                android:gravity="center_horizontal"
+                android:text="MultiPlayer Player Mode"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <TableLayout
+                android:id="@+id/MultiPlayerStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMultiPlayerMode"
+                android:layout_centerHorizontal="true"
+                android:collapseColumns="4">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="MODE"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="WIN"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="LOSS"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/stats_heading_back"
+                        android:gravity="center"
+                        android:text="TOTAL"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#515151"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:text="Random"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtRandomWinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtRandomLossScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtRandomTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#515151"
+                        android:gravity="start"
+                        android:paddingLeft="10dp"
+                        android:text="Friends"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtFriendsWinScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtFriendsLossScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txtFriendsTotalScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_profile"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_back_arrow"
+        android:backgroundTint="@color/active_user" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        ads:adSize="MEDIUM_RECTANGLE"
+        ads:adUnitId="ca-app-pub-5528158197168162/9305283729">
+
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

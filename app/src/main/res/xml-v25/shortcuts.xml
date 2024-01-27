@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:shortcutId="compose0"
+        android:shortcutShortLabel="@string/shortcut_1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.navneet.tictactoe.activity.PlayerChoiceActivity"
+            android:targetPackage="com.navneet.tictactoe" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/random_icon"
+        android:shortcutId="compose1"
+        android:shortcutShortLabel="@string/shortcut_2">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.navneet.tictactoe.activity.RandomPlayersActivity"
+            android:targetPackage="com.navneet.tictactoe" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/friend_icon"
+        android:shortcutId="compose2"
+        android:shortcutShortLabel="@string/shortcut_3">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.navneet.tictactoe.activity.OnlineCodeGeneratorActivity"
+            android:targetPackage="com.navneet.tictactoe" />
+    </shortcut>
+</shortcuts>

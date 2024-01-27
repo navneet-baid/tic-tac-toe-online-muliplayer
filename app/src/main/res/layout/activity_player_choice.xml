@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activity.PlayerChoiceActivity">
+
+    <RelativeLayout
+        android:id="@+id/coinLayout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/coins_back">
+
+        <ImageView
+            android:id="@+id/coinIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:contentDescription="@string/coin_icon"
+            android:src="@drawable/coins_icon" />
+
+        <TextView
+            android:id="@+id/availableCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/coinIcon"
+            android:gravity="center"
+            android:text="000"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/circle_splash"
+        android:src="@drawable/circle_splash" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/cross_splash"
+        android:src="@drawable/cross_splash" />
+
+    <TextView
+        android:id="@+id/textHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/singlePlayerBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:text="@string/select_player_mode"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <ImageButton
+        android:id="@+id/singlePlayerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/single_player_btn"
+        android:contentDescription="@string/single_player_btn" />
+
+    <ImageButton
+        android:id="@+id/multiPlayerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singlePlayerBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/multi_player_btn"
+        android:contentDescription="@string/multi_player_btn" />
+
+    <RelativeLayout
+        android:id="@+id/actionLayout"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/multiPlayerBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/statistics_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/statistics_icon"
+            android:contentDescription="@string/statistics_btn" />
+
+        <ImageButton
+            android:id="@+id/profile_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/profile_icon"
+            android:contentDescription="@string/profile_btn" />
+
+        <ImageButton
+            android:id="@+id/setting_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_icon"
+            android:contentDescription="@string/setting_btn" />
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textHelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        ads:adSize="MEDIUM_RECTANGLE"
+        ads:adUnitId="ca-app-pub-5528158197168162/8863131296">
+
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

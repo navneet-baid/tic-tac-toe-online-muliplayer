@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/player_profile"
+    android:backgroundTint="#2927A7"
+    tools:context=".activity.ProfileEditActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Edit Profile"
+        android:textAlignment="center"
+        android:textColor="#FFB800"
+        android:textSize="30dp"
+        android:textStyle="italic|bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/text"
+        android:layout_margin="20dp"
+        android:background="@drawable/profile_box"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:id="@+id/cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@+id/text"
+            android:background="@drawable/profile_box">
+
+            <ImageView
+                android:id="@+id/imgUserProfilePhoto"
+                android:layout_width="80dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/default_icon" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@+id/imgUserProfilePhoto"
+                android:background="@drawable/username_box"
+                android:gravity="center_horizontal"
+                android:hint="Player name"
+                android:maxLength="10"
+                android:imeOptions="actionDone"
+                android:padding="15dp"
+                android:selectAllOnFocus="false"
+                android:singleLine="true"
+                android:textColor="#FF0000"
+                android:textIsSelectable="true"
+                android:textSize="25dp" />
+
+            <View
+                android:id="@+id/viewBreakout"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/etUserName"
+                android:background="#BA4689FF" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewBreakout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_profile"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/continueBtn"
+        android:background="@drawable/ic_back_arrow"
+        android:backgroundTint="@color/active_user" />
+
+    <ImageButton
+        android:id="@+id/continueBtn"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_profile"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/continue_btn" />
+</RelativeLayout>
